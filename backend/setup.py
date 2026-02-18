@@ -8,4 +8,10 @@ setup(
     "uvicorn",
     "pydantic",
   ],
+  extras_require={
+    "dev": [
+      "pytest",
+      "httpx",
+    ]
+  }
 )

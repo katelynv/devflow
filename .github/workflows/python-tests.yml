@@ -22,14 +22,14 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
+        working-directory: backend
         run: |
-          cd backend
           python -m pip install --upgrade pip
           pip install -e .
           pip install -r requirements.txt
           pip install pytest
       
       - name: Run tests
+        working-directory: backend
         run: | 
-          cd backend
           pytest -v
